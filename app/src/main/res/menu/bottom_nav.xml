@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="@string/firstfragment"
-        android:id="@+id/firstFragment"
+        android:id="@+id/firstFragment2"
         android:icon="@drawable/baseline_coffee_24"/>
     <item android:title="@string/secondfragment"
-        android:id="@+id/secondFragment"
+        android:id="@+id/secondFragment2"
         android:icon="@drawable/baseline_coffee_24"/>
     <item android:title="@string/thirdfragment"
-        android:id="@+id/thirdFragment"
+        android:id="@+id/thirdFragment2"
         android:icon="@drawable/baseline_coffee_24"/>
 </menu>
