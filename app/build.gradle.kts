@@ -7,6 +7,10 @@ android {
     namespace = "com.tesinitsyn.firstpractiseapi34"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.tesinitsyn.firstpractiseapi34"
         minSdk = 34
