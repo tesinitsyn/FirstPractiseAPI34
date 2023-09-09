@@ -1,8 +1,9 @@
-package com.tesinitsyn.firstpractiseapi34
+package com.tesinitsyn.firstpractiseapi34.ui.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.tesinitsyn.firstpractiseapi34.R
 import com.tesinitsyn.firstpractiseapi34.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
