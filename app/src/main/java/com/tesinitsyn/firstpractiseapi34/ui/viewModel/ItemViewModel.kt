@@ -20,8 +20,8 @@ class ItemViewModel(application: Application) : AndroidViewModel(application) {
         getAllData = repository.getAllDAO
     }
 
-    fun addItem(item : Item){
-        viewModelScope.launch(Dispatchers.IO){
+    fun addItem(item: Item) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.addItem(item)
         }
     }

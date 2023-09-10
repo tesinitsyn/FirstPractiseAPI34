@@ -3,6 +3,8 @@
     <string name="firstfragment">FirstFragment</string>
     <string name="secondfragment">SecondFragment</string>
     <string name="thirdfragment">ThirdFragment</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="firstMenuTitle">Home</string>
+    <string name="secondMenuTitle">List</string>
+    <string name="thirdMenuTitle">In Development</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
