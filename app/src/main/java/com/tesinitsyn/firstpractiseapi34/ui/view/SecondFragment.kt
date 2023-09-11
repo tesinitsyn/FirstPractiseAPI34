@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.tesinitsyn.firstpractiseapi34.databinding.FragmentSecondBinding
 import com.tesinitsyn.firstpractiseapi34.ui.adapters.ListAdapter
 import com.tesinitsyn.firstpractiseapi34.ui.viewModel.ItemViewModel
