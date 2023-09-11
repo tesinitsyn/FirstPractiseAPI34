@@ -9,7 +9,7 @@
     tools:context=".ui.view.SecondFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/resyclerView"
+        android:id="@+id/recyclerView"
         android:layout_width="409dp"
         android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"

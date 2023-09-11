@@ -4,30 +4,43 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.tesinitsyn.firstpractiseapi34.R
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.tesinitsyn.firstpractiseapi34.databinding.FragmentSecondBinding
+import com.tesinitsyn.firstpractiseapi34.ui.adapters.ListAdapter
+import com.tesinitsyn.firstpractiseapi34.ui.viewModel.ItemViewModel
 
 class SecondFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-    }
+    private lateinit var binding: FragmentSecondBinding
+    private lateinit var mItemVM: ItemViewModel;
+
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
+        mItemVM = ViewModelProvider(this)[ItemViewModel::class.java]
+
+        val adapter = ListAdapter()
+
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        mItemVM.getAllData.observe(viewLifecycleOwner, Observer { item ->
+            adapter.setData(item)
+        })
+        return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SecondFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.addBtn.setOnClickListener {
+            val showPopUp = PopUpFragment()
+            showPopUp.show((activity as AppCompatActivity).supportFragmentManager, "showPopUp")
+        }
     }
 }
